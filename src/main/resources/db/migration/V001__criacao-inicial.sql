@@ -175,9 +175,27 @@ insert into cidade (id, nome, estado_id) values (1, 'Uberlândia', 1);
 insert into cidade (id, nome, estado_id) values (2, 'São Paulo', 2);
 insert into cidade (id, nome, estado_id) values (3, 'Fortaleza', 3);
 
+insert into usuario (id, data_cadastro, email, endereco_bairro, endereco_cep, endereco_complemento, endereco_logradouro, endereco_numero, nome, senha, endereco_cidade_id) values (1, utc_timestamp, 'batataotodotorto@gmail.com', 'aleatorio', '1243356', 'perto do carlão', 'rua não sei das quantas', '66', 'apenas1ignorante', '1234', 1);
+insert into usuario (id, data_cadastro, email, endereco_bairro, endereco_cep, endereco_complemento, endereco_logradouro, endereco_numero, nome, senha, endereco_cidade_id) values (2, utc_timestamp, 'slakkkj@gmail.com', 'jardim sla', '1312455', 'perto do bar do chicão', 'rua dos herois', '12', 'Ozzymandias', '5678', 2);
+insert into usuario (id, data_cadastro, email, endereco_bairro, endereco_cep, endereco_complemento, endereco_logradouro, endereco_numero, nome, senha, endereco_cidade_id) values (3, utc_timestamp, 'soyhackisbaby@gmail.com', 'hackis ali', '9390068', 'perto do bueiro', 'rua dos hacki', '98', 'Turko', '8900', 2);
+
+insert into cliente (id, cpf, telefone, cliente_usuario_id) values (1, 334143443, 2322141, 1);
+insert into cliente (id, cpf, telefone, cliente_usuario_id) values (2, 39809776, 3122131, 2);
+
+insert into negociador (id, cpf, telefone, negociador_usuario_id) values (1, 33412345, 5654661, 3);
+
+insert into anuncio (id, data_criacao, anuncio_negociador_id) values (1, '2020-11-14 13:14:30', 1);
+
+insert into negociador_anuncio (negociador_id, anuncio_id) values (1, 1);
+
 insert into produto (id, ativo, descricao, nome, preco) values (1, 1, 'livro do perci jackinson', 'livro', 19.90);
 insert into produto (id, ativo, descricao, nome, preco) values (2, 1, 'livro do miguel e sexto ano', 'livro', 15.50);
 insert into produto (id, ativo, descricao, nome, preco) values (3, 1, 'jogo GTA5', 'jogo', 29.99);
+
+insert into livro (id, isbn, altura, autor, estado_livro, genero_livro, largura, peso, profundidade, quantidade_paginas, produto_id) values (1, 121331121, 2.5, 'jose desconhecido', 'perfeito', 'ficcao', 0.5, 23, 4, 543, 1);
+insert into livro (id, isbn, altura, autor, estado_livro, genero_livro, largura, peso, profundidade, quantidade_paginas, produto_id) values (2, 784329757, 4.3, 'mc gorila', 'medio', 'romance', 0.6, 40, 5, 133, 2);
+
+insert into jogo (id, genero_jogo, requisitos_minimos, requisitos_recomendados, restricao_idade_jogo, produto_id) values (1, 'acao', 'um pczin bom', 'um pc bala', 'maior_18', 3);
 
 insert into pedido (id, data_cancelamento, data_confirmacao, data_criacao, data_entrega, endereco_bairro, endereco_cep, endereco_complemento, endereco_logradouro, endereco_numero, status, valor_total, usuario_cliente_id, endereco_cidade_id) values (1, null, '2020-11-15 13:14:30', '2020-11-15 13:14:30', '2020-12-15 11:34:20', 'Jardim dos frangos', '12345678', 'Perto dos outros frangos', 'Rua dos frangos', '123', 'entrege', 129.89, 1, 1);
 insert into pedido (id, data_cancelamento, data_confirmacao, data_criacao, data_entrega, endereco_bairro, endereco_cep, endereco_complemento, endereco_logradouro, endereco_numero, status, valor_total, usuario_cliente_id, endereco_cidade_id) values (2, null, '2020-11-13 23:10:20', '2020-11-15 11:05:00', '2020-12-17 12:34:20', 'Jardim dos anonimous', '23232323', 'Perto dos outros anonimous', 'Rua dos anonimous', '456', 'entrege', 34.59, 1, 1);
@@ -186,20 +204,3 @@ insert into pedido (id, data_cancelamento, data_confirmacao, data_criacao, data_
 insert into item_pedido (id, preco_total, quantidade, pedido_id, produto_id) values (1, 23.70, 4, 1, 1);
 insert into item_pedido (id, preco_total, quantidade, pedido_id, produto_id) values (2, 45.80, 7, 2, 2);
 insert into item_pedido (id, preco_total, quantidade, pedido_id, produto_id) values (3, 90.85, 9, 3, 3);
-
-insert into livro (id, isbn, altura, autor, estado_livro, genero_livro, largura, peso, profundidade, quantidade_paginas, produto_id) values (1, 121331121, 2.5, 'jose desconhecido', 'perfeito', 'ficcao', 0.5, 23, 4, 543, 1);
-insert into livro (id, isbn, altura, autor, estado_livro, genero_livro, largura, peso, profundidade, quantidade_paginas, produto_id) values (2, 784329757, 4.3, 'mc gorila', 'medio', 'romance', 0.6, 40, 5, 133, 2);
-
-insert into jogo (id, genero_jogo, requisitos_minimos, requisitos_recomendados, restricao_idade_jogo, produto_id) values (1, acao, 'um pczin bom', 'um pc bala', 'maior_18', 3);
-
-insert into usuario (id, data_cadastro, email, endereco_bairro, endereco_cep, endereco_complemento, endereco_logradouro, endereco_numero, nome, senha, endereco_cidade_id) values (1, utc_timestamp, 'batataotodotorto@gmail.com', 'aleatorio', '1243356', 'perto do carlão', 'rua não sei das quantas', '66', 'apenas1ignorante', '1234', 1);
-insert into usuario (id, data_cadastro, email, endereco_bairro, endereco_cep, endereco_complemento, endereco_logradouro, endereco_numero, nome, senha, endereco_cidade_id) values (2, utc_timestamp, 'slakkkj@gmail.com', 'jardim sla', '1312455', 'perto do bar do chicão', 'rua dos herois', '12', 'Ozzymandias', '5678', 2);
-insert into usuario (id, data_cadastro, email, endereco_bairro, endereco_cep, endereco_complemento, endereco_logradouro, endereco_numero, nome, senha, endereco_cidade_id) values (3, utc_timestamp, 'soyhackisbaby@gmail.com', 'hackis ali', '9390068', 'perto do bueiro', 'rua dos hacki', '98', 'Turko', '8900', 2);
-
-insert into cliente (id, cpf, telefone, cliente_usuario_id) values (1, 334143443, 2322141, 1);
-insert into cliente (id, cpf, telefone, cliente_usuario_id) values (2, 39809776, 3122131, 2);
-
-insert into negociador (id, cpf, telefone, negociador_usuario_id) values (3, 33412345, 5654661, 3);
-
-insert into negociador_anuncio (negociador_id, anuncio_id) values (3, 1);
-
