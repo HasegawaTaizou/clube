@@ -8,25 +8,17 @@ create table usuario (
 
 create table anuncio (
   id bigint not null auto_increment,
-  data_criacao datetime(6), 
-  anuncio_negociador_id bigint not null, 
-
-primary key (id, anuncio_negociador_id)
-) engine=InnoDB default charset=utf8;
-
-create table usuario_anuncio (
-  negociador_id bigint not null, 
-  anuncio_id bigint not null,
-
-  primary key (negociador_id, anuncio_id)
-) engine=InnoDB default charset=utf8;
-
-create table jogo (
-  id bigint not null auto_increment,
   genero varchar(255) not null,
   restricao_idade varchar(255) not null,
 
   primary key (id)
+) engine=InnoDB default charset=utf8;
+
+create table usuario_anuncio (
+  usuario_id bigint not null, 
+  anuncio_id bigint not null,
+
+  primary key (negociador_id, anuncio_id)
 ) engine=InnoDB default charset=utf8;
 
 create table pedido (
