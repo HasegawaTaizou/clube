@@ -47,7 +47,6 @@ create table item_pedido (
 ) engine=InnoDB default charset=utf8;
 
 
-
 alter table pedido add constraint fk_pedido_cliente 
 foreign key (usuario_cliente_id) references cliente (id);
 
