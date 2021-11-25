@@ -8,8 +8,14 @@ create table usuario (
 
 create table anuncio (
   id bigint not null auto_increment,
+  titulo varchar(255) not null,
+  plataforma varchar(255) not null,
+  preco decimal(19, 2) not null,
+  descricao varchar(255) not null,
   genero varchar(255) not null,
+  url_imagem varchar(255) not null,
   restricao_idade varchar(255) not null,
+  favorito boolean null,
 
   primary key (id)
 ) engine=InnoDB default charset=utf8;
