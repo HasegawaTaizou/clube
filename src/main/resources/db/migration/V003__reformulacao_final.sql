@@ -33,7 +33,7 @@ create table pedido (
   valor_total decimal(19, 2) not null,
   usuario_cliente_id bigint not null,
   
-  primary key (id, usuario_cliente_id, endereco_cidade_id)
+  primary key (id, usuario_cliente_id)
 ) engine=InnoDB default charset=utf8; 
 
 create table item_pedido (
