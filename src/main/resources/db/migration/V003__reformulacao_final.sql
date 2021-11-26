@@ -49,15 +49,12 @@ create table item_pedido (
 
 
 alter table usuario add constraint fk_usuario_anuncio  
-foreign key (anuncio_id) references anuncio (id); -- 
+foreign key (anuncio_id) references anuncio (id);
 
-alter table anuncio_compra add constraint fk_anuncio_compra_anuncio
+alter table usuario_anuncio add constraint fk_anuncio_compra_anuncio
 foreign key (anuncio_id) references anuncio (id); --
 
-alter table anuncio_compra add constraint fk_anuncio_compra_compra 
-foreign key (compra_id) references compra (id); -- 
-
-alter table anuncio_compra add constraint fk_anuncio_compra_anuncio
+alter table usuario_anuncio add constraint fk_anuncio_compra_anuncio
 foreign key (anuncio_id) references anuncio (id); -- 
 
 alter table pedido add constraint fk_pedido_usuario 
