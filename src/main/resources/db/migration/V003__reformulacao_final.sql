@@ -24,7 +24,7 @@ create table usuario_anuncio (
   usuario_id bigint not null, 
   anuncio_id bigint not null,
 
-  primary key (negociador_id, anuncio_id)
+  primary key (usuario_id, anuncio_id)
 ) engine=InnoDB default charset=utf8;
 
 create table pedido (
