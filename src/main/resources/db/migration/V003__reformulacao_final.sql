@@ -1,20 +1,20 @@
 create table usuario (
   id bigint not null auto_increment,
-  email varchar(255) not null,
-  senha varchar(255) not null,
+  email varchar(55) not null,
+  senha varchar(55) not null,
 
   primary key (id)
 ) engine=InnoDB default charset=utf8;
 
 create table anuncio (
   id bigint not null auto_increment,
-  titulo varchar(255) not null,
-  plataforma varchar(255) not null,
+  titulo varchar(55) not null,
+  plataforma varchar(55) not null,
   preco decimal(19, 2) not null,
-  descricao varchar(255) not null,
-  genero varchar(255) not null,
-  url_imagem varchar(255) not null,
-  restricao_idade varchar(255) not null,
+  descricao varchar(55) not null,
+  genero varchar(55) not null,
+  url_imagem varchar(55) not null,
+  restricao_idade varchar(55) not null,
   favorito boolean null,
 
   primary key (id)
@@ -47,8 +47,8 @@ create table item_pedido (
 ) engine=InnoDB default charset=utf8;
 
 
-alter table pedido add constraint fk_pedido_cliente 
-foreign key (usuario_cliente_id) references cliente (id);
+alter table pedido add constraint fk_pedido_usuario 
+foreign key (usuario_cliente_id) references usuario (id);
 
 alter table item_pedido add constraint fk_item_pedido_pedido
 foreign key (pedido_id) references pedido (id);
