@@ -51,11 +51,11 @@ create table item_pedido (
 alter table usuario add constraint fk_usuario_anuncio  
 foreign key (anuncio_id) references anuncio (id);
 
-alter table usuario_anuncio add constraint fk_
-foreign key (usuario_id) references usuario (id); --
+alter table usuario_anuncio add constraint fk_usuario_anuncio_usuario
+foreign key (usuario_id) references usuario (id); 
 
-alter table usuario_anuncio add constraint fk_
-foreign key (anuncio_id) references anuncio (id); -- 
+alter table usuario_anuncio add constraint fk_usuario_anuncio_anuncio
+foreign key (anuncio_id) references anuncio (id); 
 
 alter table pedido add constraint fk_pedido_usuario 
 foreign key (usuario_cliente_id) references usuario (id);
